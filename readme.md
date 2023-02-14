@@ -3,7 +3,7 @@
 
 <ul>
     <li>slides with images, video and text</li>
-    <li>lazyload images, video/li>
+    <li>lazyload images, video</li>
     <li>position slides: left, right, center</li>
     <li>play audio on button</li>
     <li>all responsive</li>
