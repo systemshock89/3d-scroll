@@ -1,5 +1,5 @@
-<h1>Gallery with 3d scroll</h1>
-<p><a href="https://systemshock89.github.io/3d-scroll/">See demo</a></p>
+<h1>Gallery with 3D scroll</h1>
+<p><a href="https://systemshock89.github.io/demo-3d-scroll/">See demo</a></p>
 
 <ul>
     <li>slides with images, video and text</li>
