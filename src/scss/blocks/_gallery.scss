@@ -1,0 +1,114 @@
+.container{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  perspective: 1500px; // работает с трансформированием по оси Z
+}
+
+.gallery{
+  // Эл-ты, у которых будет меняться значение по оси Z находятся в div container и в div gallery
+  // gallery как прослойка должна иметь transform-style: preserve-3d
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.frame{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition), opacity .75s ease;
+  will-change: transform;
+  transform-style: preserve-3d; // чтобы шрифт при увеличении был не размытый, а четкий
+
+  h2 {
+    text-align: center;
+    font-size: calc(var(--index) * 3.3);
+  }
+
+  h3 {
+    font-size: calc(var(--index) * 3);
+  }
+
+  p {
+    max-width: 30vw;
+    margin-top: 3vh;
+  }
+}
+
+.frame-media {
+  position: relative;
+  width: calc(var(--index) * var(--side-small));
+  height: calc(var(--index) * var(--side-big));
+  background-position: center;
+  background-size: cover;
+}
+
+.frame-media_left {
+  right: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+}
+
+.frame-media_right {
+  left: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+}
+
+// затемняет фреймы, которые слишком далеко (добавляется каждому третьему фрейму)
+.frame_bg {
+  //position: relative;
+  &:before{
+    content: '';
+    width: 200vw;
+    height: 200vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / .87);
+  }
+}
+
+video.frame-media {
+  // в видео меняем пропорции в отличии от img
+  width: calc(var(--index) * var(--side-big));
+  height: calc(var(--index) * var(--side-small));
+}
+video.frame-media_right {
+  left: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
+}
+video.frame-media_left {
+  right: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
+}
+
+.text-right > * {
+  position: relative;
+  left: 18vw;
+}
+.text-left > * {
+  position: relative;
+  right: 18vw;
+}
+
+// soundbutton
+.soundbutton {
+  position: fixed;
+  bottom: 5vh;
+  right: 5vw;
+  transition: .25s ease;
+  cursor: pointer;
+  background-color: transparent;
+  border:none;
+  img{
+    width: 24px;
+  }
+  &.paused {
+    opacity: .25;
+  }
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.audio{
+  display: none;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('head.html', {
+    "title": "3D Scroll",
+    "description": "description"
+    })
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="gallery">
+
+            <div class="frame">
+                <div class="frame__content">
+                    <h2>Beautiful World</h2>
+                </div>
+            </div>
+
+            <div class="frame">
+                <div class="frame__content">
+                    <div class="frame-media frame-media_left lazy" data-bg="img/1.webp"></div>
+                </div>
+            </div>
+
+            <div class="frame frame_bg">
+                <div class="frame__content">
+                    <video class="frame-media frame-media_right lazy" data-src="media/video_optimized.mp4" src="#" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+
+            <!-- Пустой фрейм нужен, чтобы отдалить следующий фрейм -->
+            <div class="frame"></div>
+
+            <div class="frame">
+                <div class="frame__content text-right">
+                    <h3>Pure planet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur elit adipisicing. Nemo fugit, rerum dolorem assumenda consequatur dicta error iure laboriosam temporibus.</p>
+                </div>
+            </div>
+
+            <div class="frame frame_bg">
+                <div class="frame__content">
+                    <div class="frame-media frame-media_left lazy" data-bg="img/2.webp"></div>
+                </div>
+            </div>
+
+            <div class="frame"></div>
+
+            <div class="frame frame_bg">
+                <div class="frame__content">
+                    <div class="frame-media frame-media_right lazy" data-bg="img/3.webp"></div>
+                </div>
+            </div>
+
+            <div class="frame"></div>
+
+            <div class="frame">
+                <div class="frame__content text-left">
+                    <h3>Ask the Mountains</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur elit. Rerum dolorem assumenda consequatur dicta error iure laboriosam temporibus omnis quae eaque aliquam esse unde accusamus dolores non soluta.</p>
+                </div>
+            </div>
+
+            <div class="frame frame_bg">
+                <div class="frame__content">
+                    <div class="frame-media frame-media_right lazy" data-bg="img/4.webp"></div>
+                </div>
+            </div>
+
+            <div class="frame">
+                <div class="frame__content">
+                    <video class="frame-media frame-media_left lazy" data-src="media/video_optimized.mp4" src="#" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+
+            <div class="frame"></div>
+            <div class="frame"></div>
+
+            <div class="frame frame_bg">
+                <div class="frame__content">
+                    <div class="frame-media frame-media_right lazy" data-bg="img/5.webp"></div>
+                </div>
+            </div>
+
+            <div class="frame frame_bg">
+                <div class="frame__content">
+                    <video class="frame-media lazy" data-src="media/video_optimized.mp4" src="#" autoplay loop muted playsinline></video>
+                </div>
+            </div>
+
+            <div class="frame"></div>
+            <div class="frame"></div>
+
+            <div class="frame">
+                <div class="frame__content">© 2023</div>
+            </div>
+
+        </div>
+    </div>
+
+    <button class="soundbutton paused"><img src="media/sound.webp" width="24" height="24" alt="Включить музыку"></button>
+    <audio class="audio" src="media/ambient.mp3" loop></audio>
+
+    <script src="js/bundle.min.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+// подключение шрифтов только woff2
+@mixin font($fname, $fweight, $fstyle, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-display: swap;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format('woff2');
+  }
+}
+
+@include font('raleway-my', 100, normal, '../fonts/raleway-v22-cyrillic-100.woff2');
+@include font('raleway-my', 300, normal, '../fonts/raleway-v22-cyrillic-300.woff2');
+
+// Font fallbacks
+// npx fontpie ./src/fonts/roboto-regular-webfont.woff2 -n roboto-my
+// npx fontpie ./src/fonts/roboto-bold-webfont.woff2 -w 700 -n roboto-my
+// npx fontpie ./src/fonts/roboto-italic-webfont.woff2 -s italic -n roboto-my
+// https://github.com/pixel-point/fontpie
+
+@font-face {
+  font-family: 'raleway-my Fallback';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Arial');
+  ascent-override: 92.39%;
+  descent-override: 23.00%;
+  line-gap-override: 0.00%;
+  size-adjust: 101.74%;
+}
+
+@font-face {
+  font-family: 'raleway-my Fallback';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Arial');
+  ascent-override: 90.53%;
+  descent-override: 22.54%;
+  line-gap-override: 0.00%;
+  size-adjust: 103.84%;
+}
+
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black

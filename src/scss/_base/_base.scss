@@ -1,0 +1,25 @@
+body {
+  font-size: calc(var(--index) * .8);
+  font-family: 'raleway-my', 'raleway-my Fallback', sans-serif;
+  color: #fff;
+  line-height: 1.75;
+  font-weight: 300;
+
+  min-width: 320px;
+
+  background-color: #000;
+  height: var(--depth);
+
+  // скрыть скроллбар
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+  text-transform: uppercase;
+  width: min-content;
+  line-height: 1;
+}
